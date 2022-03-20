@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <Spinner
+            android:id="@+id/Region_spinner"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+
+
+            android:background="@drawable/oblick"
+            android:prompt="@string/RF"
+
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NameText" />
+
+        <EditText
+            android:id="@+id/NameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/oblick"
+            android:ems="10"
+            android:hint="Введите название "
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countFoto" />
+
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/oblick"
+            android:ems="10"
+            android:hint="Контактный номер телефона"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <EditText
+            android:id="@+id/addressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:ems="10"
+            android:hint="Адрес достопримечательности"
+            android:background="@drawable/oblick"
+            android:inputType="textPostalAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Region_spinner" />
+
+
+        <EditText
+            android:id="@+id/webText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/oblick"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Веб-сайт"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="onClickMail"
+            android:text="Отправить заявку"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeworkText"
+            app:layout_constraintVertical_bias="1.0"
+            android:background="@drawable/buttonadd"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/discriptinSight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/oblick"
+                android:hint="Описание достопримечательности" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/priceText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/oblick"
+            android:ems="10"
+
+            android:hint="Цена"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/webText" />
+
+        <EditText
+            android:id="@+id/timeworkText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+
+            android:background="@drawable/oblick"
+            android:ems="10"
+            android:hint="Время работы "
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceText" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="onClickImageDowload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/countFoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/oblick"
+            android:gravity="center"
+            android:text="Загружено фотографий: 0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+        <TextView
+            android:id="@+id/errorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/NameText"
+            app:layout_constraintStart_toStartOf="@+id/NameText"
+            app:layout_constraintTop_toBottomOf="@+id/NameText" />
+
+        <TextView
+            android:id="@+id/errorPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNumber"
+            app:layout_constraintStart_toStartOf="@+id/phoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+        <TextView
+            android:id="@+id/errorWeb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/webText"
+            app:layout_constraintStart_toStartOf="@+id/webText"
+            app:layout_constraintTop_toBottomOf="@+id/webText" />
+
+        <TextView
+            android:id="@+id/errorRegion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/Region_spinner"
+            app:layout_constraintStart_toStartOf="@+id/Region_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/Region_spinner" />
+
+        <TextView
+            android:id="@+id/errorAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/addressText"
+            app:layout_constraintStart_toStartOf="@+id/addressText"
+            app:layout_constraintTop_toBottomOf="@+id/addressText" />
+
+        <TextView
+            android:id="@+id/errorDirection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <TextView
+            android:id="@+id/errorCost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/priceText"
+            app:layout_constraintStart_toEndOf="@+id/priceText"
+            app:layout_constraintStart_toStartOf="@+id/priceText"
+            app:layout_constraintTop_toBottomOf="@+id/priceText" />
+
+        <TextView
+            android:id="@+id/errorTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/design_default_color_error"
+            app:layout_constraintEnd_toEndOf="@+id/timeworkText"
+            app:layout_constraintStart_toEndOf="@+id/timeworkText"
+            app:layout_constraintStart_toStartOf="@+id/timeworkText"
+            app:layout_constraintTop_toBottomOf="@+id/timeworkText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

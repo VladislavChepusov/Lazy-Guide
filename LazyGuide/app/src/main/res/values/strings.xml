@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LazyGuide</string>
+
+    <string name="RF">Регионы Российской Федерации</string>
+    <string name="title_activity_deletemap">Map</string>
+    <string name="title_activity_full_map">Map</string>
+    <string name="title_activity_full_maps">Map</string>
+
+</resources>
