@@ -1,7 +1,7 @@
 //Connection DB
 const config = {
     port: 1433,
-    server: 'LAPTOP-CH2DPNJ6',
+    server: 'LAPTOP',
     user: 'test',
     password: 'test',
     database: 'DiplomDatabase',
